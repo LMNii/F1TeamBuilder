@@ -1,6 +1,6 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
-    let budget = 150000000;
+    let budget = 50000000;
     let boughtDrivers = 0;
     let driver = [{name:"Hamilton", cost: 15000000},
         {name:"Bottas", cost:800000},
@@ -70,6 +70,31 @@ $('.driverBuyBtn').click(function () {
         }
         if (x === "Lec") {
             budget -= driver[3]['cost'];
+            disableButton;
+            greyButton;
+        }
+        if (x === "Ver") {
+            budget -= driver[4]['cost'];
+            disableButton;
+            greyButton;
+        }
+        if (x === "Alb") {
+            budget -= driver[5]['cost'];
+            disableButton;
+            greyButton;
+        }
+        if (x === "Sai") {
+            budget -= driver[6]['cost'];
+            disableButton;
+            greyButton;
+        }
+        if (x === "Nor") {
+            budget -= driver[7]['cost'];
+            disableButton;
+            greyButton;
+        }
+        if (x === "Ric") {
+            budget -= driver[8]['cost'];
             disableButton;
             greyButton;
         }
