@@ -9,23 +9,42 @@
     <script src="main.js"></script>
 </head>
 <body>
-<h2>Put together your F1 team!</h2>
+<header><h2>Put together your F1 team!</h2></header>
 <div class="budget">
 
 </div>
 <br>
+<div id="driverContent">
 <div id="driverSelectors">
     <h3>Choose 2 drivers:</h3>
-        <div id="hamCard" class="driverCard">
+        <div id="hamCard" class="driverCardMerc">
             <p>Lewis Hamilton</p>
             <p>Cost: 15.000.000</p>
             <button type="button" class="driverBuyBtn" name="Ham" id="buyHam" >Buy</button>
         </div>
-    <div id="botCard" class="driverCard">
+    <div id="botCard" class="driverCardMerc">
         <p>Valterri Bottas</p>
         <p>Cost: 800.000</p>
         <button type="button" class="driverBuyBtn" name="Bot" id="buyBot" >Buy</button>
     </div>
+    <div id="vetCard" class="driverCardFer">
+        <p>Sebastian Vettel</p>
+        <p>Cost: 13.000.000</p>
+        <button type="button" class="driverBuyBtn" name="Vet" id="buyVet" >Buy</button>
+    </div>
+    <div id="lecCard" class="driverCardFer">
+        <p>Charles Leclerc</p>
+        <p>Cost: 800.000</p>
+        <button type="button" class="driverBuyBtn" name="Lec" id="buyLec" >Buy</button>
+    </div>
+</div>
+<div id="driverSelectors2">
+    <div id="verCard" class="driverCardRed">
+        <p>Max Verstappen</p>
+        <p>Cost: 1.000.000</p>
+        <button type="button" class="driverBuyBtn" name="Ver" id="buyVer" >Buy</button>
+    </div>
+</div>
 </div>
 </body>
 </html>

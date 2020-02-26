@@ -1,7 +1,7 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
     let budget = 150000000;
-    let boughtDrivers;
+    let boughtDrivers = 0;
     let driver = [{name:"Hamilton", cost: 15000000},
         {name:"Bottas", cost:800000},
         {name:"Vettel", cost :13000000},
@@ -39,20 +39,39 @@ $( document ).ready(function() {
 
 $('.driverBuyBtn').click(function () {
     let driverName = $(this).attr('name');
+    boughtDrivers+= 1;
     console.log(driverName);
     buyDriver(driverName);
+    if (boughtDrivers === 2){
+        $('.driverBuyBtn').prop("disabled", true);
+        $('.driverBuyBtn').css('background', '#aaa');
+    }
 });
     function buyDriver(x){
-        if (x === "Ham")
+        let buyDriverSelector = $('button[name="' + x + '"]');
+        let disableButton = buyDriverSelector.prop("disabled",true);
+        let greyButton = buyDriverSelector.css('background', '#aaa');
+        if (x === "Ham"){
             budget -= driver[0]['cost'];
-            $('button[name="' + x + '"]').prop("disabled",true);
-            boughtDrivers++;
-        if (x === "Bot")
-            budget -= driver[1]['cost'];
-            $('button[name="' + x + '"]').prop("disabled",true);
-            boughtDrivers++;
-        if (boughtDrivers === 2){
+            disableButton;
+            greyButton;
+        }
 
+        if (x === "Bot") {
+            budget -= driver[1]['cost'];
+            disableButton;
+            greyButton;
+        }
+
+        if (x === "Vet") {
+            budget -= driver[2]['cost'];
+            disableButton;
+            greyButton;
+        }
+        if (x === "Lec") {
+            budget -= driver[3]['cost'];
+            disableButton;
+            greyButton;
         }
         console.log(budget);
         return budget;
